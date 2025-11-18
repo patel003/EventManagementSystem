@@ -1,0 +1,212 @@
+﻿@{
+    ViewData["Title"] = "Event";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <div class="subheader py-3 py-lg-8 subheader-transparent" id="kt_subheader">
+        <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+            <!--begin::Info-->
+            <div class="d-flex align-items-center flex-wrap mr-1">
+                <!--begin::Page Heading-->
+                <div class="d-flex align-items-baseline mr-5">
+                    <!--begin::Page Title-->
+                    <h2 class="subheader-title text-dark font-weight-bold my-2 mr-3">Event_Master</h2>
+                    <!--end::Page Title-->
+                </div>
+                <!--end::Page Heading-->
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-column-fluid">
+        <!--begin::Container-->
+        <div class="container">
+            <!--begin::Dashboard-->
+            <!--begin::Row-->
+            <div class="row">
+                <!--begin::Card-->
+                <div class="card card-custom  card w-100">
+                    <div class="card-header flex-wrap border-0 pt-6 pb-0">
+                        <div class="card-title">
+                            <h3 class="card-label">
+                                All Event
+
+                            </h3>
+                        </div>
+                        <div class="card-toolbar">
+
+                            <!--begin::Button-->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Add Event</button>
+                            <!--end::Button-->
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <!--begin: Search Form-->
+                        <!--begin::Search Form-->
+                        <div class="mb-7">
+                            <div class="row align-items-center">
+                                <div class="col-lg-9 col-xl-8">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-4 my-2 my-md-0">
+                                            <div class="input-icon">
+                                                <input type="text" class="form-control" placeholder="Search..." id="kt_datatable_search_query" />
+                                                <span>
+                                                    <i class="flaticon2-search-1 text-muted"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 my-2 my-md-0">
+                                            <div class="d-flex align-items-center">
+                                                <label class="mr-3 mb-0 d-none d-md-block">Status:</label>
+                                                <select class="form-control" id="kt_datatable_search_status">
+                                                    <option value="">All</option>
+                                                    <option value="1">Block</option>
+                                                    <option value="2">UnBlock</option>
+                                                    @* <option value="3">Canceled</option>
+                                                    <option value="4">Success</option>
+                                                    <option value="5">Info</option>
+                                                    <option value="6">Danger</option> *@
+                                                </select>
+                                            </div>
+                                        </div>
+                                        @* <div class="col-md-4 my-2 my-md-0">
+                                            <div class="d-flex align-items-center">
+                                                <label class="mr-3 mb-0 d-none d-md-block">Type:</label>
+                                                <select class="form-control" id="kt_datatable_search_type">
+                                                    <option value="">All</option>
+                                                    <option value="1">Online</option>
+                                                    <option value="2">Retail</option>
+                                                    <option value="3">Direct</option>
+                                                </select>
+                                            </div>
+                                        </div> *@
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-xl-4 mt-5 mt-lg-0">
+                                    <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Search</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::Search Form-->
+                        <!--end: Search Form-->
+                        <!--begin: Datatable-->
+                        <div class="datatable datatable-bordered datatable-head-custom" id="EventMasterTable"></div>
+                        <!--end: Datatable-->
+                    </div>
+                </div>
+                <!--end::Card-->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalSizeLg" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Add Event</h5>
+                                <button type="button" class="close" id="resetBtn" data-dismiss="modal" aria-label="Close">
+                                    <i aria-hidden="true" class="ki ki-close"></i>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/EventMaster/InsertUpdate" method="post" ">
+                                    <div class="row">
+                                        <div class="col-6">
+
+                                            <div class="form-group row">
+                                                <label class="col-5 col-form-label">Event Name</label>
+                                                <div class="col-11">
+                                                    <input class="form-control" type="text" name="Event_Name" id="NameId" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-5 col-form-label">Event Description</label>
+                                                <div class="col-11">
+                                                    <input class="form-control" type="text" name="Event_discription" id="DiscriptionId" />
+                                                </div>
+                                            </div>
+                                            <div class="col-11">
+                                                <div class="form-group row">
+                                                    <label class="col-5 col-form-label">Organizer</label>
+                                                    <input class="form-control" type="text" name="Organizer" id="OrganizerId" />
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="example-datetime-local-input" class="col-5 col-form-label">Event Date</label>
+                                                <div class="col-11">
+                                                    <input class="form-control" type="date" name="Event_Date" id="DateId" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="example-datetime-local-input" class="col-5 col-form-label">start Time</label>
+                                                <div class="col-11">
+                                                    <input class="form-control" type="time"
+                                                           name="start Time" id="startId" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="example-datetime-local-input" class="col-5 col-form-label">Price</label>
+                                                <div class="col-11">
+                                                    <input class="form-control" type="text" name="price" id="PriceId" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-6">
+
+
+                                          
+                                            <div class="form-group row">
+                                                <label for="example-datetime-local-input" class="col-5 col-form-label">In Time</label>
+                                                <div class="col-11">
+                                                    <input class="form-control" type="time" name="In Time" id="InId" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-5 mt-4">EventCategoryID</label>
+                                                <select class="custom-select form-control col-11" name="Event_category" id="CategoryId">
+                                                    @if (ViewBag.AllCategory.Status == true)
+                                                    {
+                                                        foreach (var item in @ViewBag.AllCategory.Data)
+                                                        {
+                                                            <option value="@item.CATEGORY_ID">@item.CATEGORY_NAME</option>
+
+                                                        }
+                                                    }
+                                                   
+                                                </select>
+                                            </div>
+                                            
+                                                <div class="form-group row">
+                                                    <label class="col-5 col-form-label">Location</label>
+                                                <input class="form-control" type="text" name="Location" id="LocationId" />
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-5 col-form-label">Mobile_No</label>
+                                                    <input class="form-control" type="text" name="Mobile_No" id="MobileId" />
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-5 col-form-label">Theme</label>
+                                                    <input class="form-control" type="text" name="Theme" id="ThemeId" />
+                                                </div>
+
+
+                                                <div class="form-group row">
+                                                   
+                                                    <input class="form-control" type="hidden" name="Event_ID" id="EventId" />
+                                                </div>
+                                            
+                                        </div> 
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-light-primary font-weight-bold">Submit</button>
+                                        <button type="submit" class="btn btn-primary font-weight-bold" id="closebtn">Close</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
