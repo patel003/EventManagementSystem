@@ -8,12 +8,12 @@ namespace EventManagementSystem.BAL
     {
 
         CommonResponse<AreaChart_DTO> Response = new CommonResponse<AreaChart_DTO>();
-        public CommonResponse<AreaChart_DTO> AreaChart()
+        public CommonResponse<AreaChart_DTO> AreaChart(int UserIdforchart)
         {
             try
             {
                 Dashboard_DAL DAL = new Dashboard_DAL();
-                DataTable dt = DAL.AreaChart();
+                DataTable dt = DAL.AreaChart(UserIdforchart);
                 if (dt.Rows.Count > 0)
                 {
                     List<AreaChart_DTO> dTOs = new List<AreaChart_DTO>();
@@ -49,12 +49,12 @@ namespace EventManagementSystem.BAL
         }
 
         CommonResponse<ColumnChart_DTO> ColResponse = new CommonResponse<ColumnChart_DTO>();
-        public CommonResponse<ColumnChart_DTO> ColumnChart()
+        public CommonResponse<ColumnChart_DTO> ColumnChart(int UserIdforchart)
         {
             try
             {
                 Dashboard_DAL DAL = new Dashboard_DAL();
-                DataTable dt = DAL.ColumnChart();
+                DataTable dt = DAL.ColumnChart(UserIdforchart);
                 if (dt.Rows.Count > 0)
                 {
                     List<ColumnChart_DTO> dTOs = new List<ColumnChart_DTO>();
@@ -90,12 +90,12 @@ namespace EventManagementSystem.BAL
         }
 
         CommonResponse<DonutChart_DTO> DonResponse = new CommonResponse<DonutChart_DTO>();
-        public CommonResponse<DonutChart_DTO> DonutChart()
+        public CommonResponse<DonutChart_DTO> DonutChart(int UserIdforchart)
         {
             try
             {
                 Dashboard_DAL DAL = new Dashboard_DAL();
-                DataTable dt = DAL.DonutChart();
+                DataTable dt = DAL.DonutChart(UserIdforchart);
                 if (dt.Rows.Count > 0)
                 {
                     List<DonutChart_DTO> dTOs = new List<DonutChart_DTO>();
@@ -131,12 +131,12 @@ namespace EventManagementSystem.BAL
         }
 
         CommonResponse<PieChart_DTO> PieResponse = new CommonResponse<PieChart_DTO>();
-        public CommonResponse<PieChart_DTO> PieChart()
+        public CommonResponse<PieChart_DTO> PieChart( int UserIdforchart)
         {
             try
             {
                 Dashboard_DAL DAL = new Dashboard_DAL();
-                DataTable dt = DAL.DonutChart();
+                DataTable dt = DAL.DonutChart(UserIdforchart);
                 if (dt.Rows.Count > 0)
                 {
                     List<PieChart_DTO> dTOs = new List<PieChart_DTO>();

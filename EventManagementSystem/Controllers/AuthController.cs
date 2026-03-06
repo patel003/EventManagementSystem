@@ -38,7 +38,7 @@ namespace EventManagementSystem.Controllers
                
                  new Claim(ClaimTypes.Name, User.Data[0].FULL_NAME.ToString()),
                  new Claim(ClaimTypes.Email, User.Data[0].EMAIL.ToString()),
-                 //new Claim(ClaimTypes.Role, User.Data[0].ROLE_ID.ToString()),
+                 new Claim("RoleId", User.Data[0].ROLE_ID.ToString()),
                  new Claim(ClaimTypes.Actor,User.Data[0].ROLE_NAME.ToString()),
                  new Claim(ClaimTypes.Role, User.Data[0].ROLE_ID == 1 ? "Admin" : "Guest")
 

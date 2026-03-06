@@ -48,6 +48,9 @@ namespace EventManagementSystem.BAL
                 return new Random().Next(100000, 999999).ToString();
             }
 
+
+
+
         public CommonResponse<OtpSender_DTO> OTPSENDER(string EMAIL)
         {
             var resp = new CommonResponse<OtpSender_DTO>();

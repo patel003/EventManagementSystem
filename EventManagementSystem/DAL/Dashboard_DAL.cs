@@ -6,7 +6,7 @@ namespace EventManagementSystem.DAL
 {
     public class Dashboard_DAL
     {
-        public DataTable DonutChart()
+        public DataTable DonutChart(int UserIdforchart)
         {
             SqlParameter[] sp = new SqlParameter[]
             {
@@ -15,7 +15,7 @@ namespace EventManagementSystem.DAL
             return DataHelper.ExecuteParameterisedDatatableCommand("SP_EventCharts", CommandType.StoredProcedure, sp);
         }
 
-        public DataTable PieChart()
+        public DataTable PieChart(int UserIdforchart)
         {
             SqlParameter[] sp = new SqlParameter[]
             {
@@ -24,7 +24,7 @@ namespace EventManagementSystem.DAL
             return DataHelper.ExecuteParameterisedDatatableCommand("SP_EventCharts", CommandType.StoredProcedure, sp);
         }
 
-        public DataTable AreaChart()
+        public DataTable AreaChart(int UserIdforchart)
         {
             SqlParameter[] sp = new SqlParameter[]
             {
@@ -33,7 +33,7 @@ namespace EventManagementSystem.DAL
             return DataHelper.ExecuteParameterisedDatatableCommand("SP_EventCharts", CommandType.StoredProcedure, sp);
         }
 
-        public DataTable ColumnChart()
+        public DataTable ColumnChart(int UserIdforchart)
         {
             SqlParameter[] sp = new SqlParameter[]
             {
