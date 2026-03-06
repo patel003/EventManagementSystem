@@ -4,17 +4,15 @@ EXPOSE 8080
 
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
-COPY ["EventManagementSystem/EventManagementSystem.csproj", "EventManagementSystem/"]
-RUN dotnet restore
 COPY . .
 WORKDIR "/src/EventManagementSystem"
-RUN dotnet build -c Release -o /app/build
+RUN dotnet restore "EventManagementSystem.csproj"
+RUN dotnet build "EventManagementSystem.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish -c Release -o /app/publish
+RUN dotnet publish "EventManagementSystem.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "EventManagementSystem.dll"]
-
