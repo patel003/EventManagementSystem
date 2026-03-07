@@ -1,10 +1,10 @@
-# 🎉 Event Management System
+#  Event Management System
 
 A web-based **Event Management System** developed using **ASP.NET Core MVC** with **ADO.NET**, following a clean **3-Tier Architecture**. The system allows users to register, log in, browse, and manage events in a scalable and maintainable way.
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [About the Project](#about-the-project)
 - [Architecture](#architecture)
@@ -18,7 +18,7 @@ A web-based **Event Management System** developed using **ASP.NET Core MVC** wit
 
 ---
 
-## 📖 About the Project
+##  About the Project
 
 The **Event Management System** is built on **ASP.NET Core MVC** with **ADO.NET** for database communication. It follows a **3-Tier Architecture** by implementing separate **DAL (Data Access Layer)** and **BAL (Business Access Layer)**, making the application:
 
@@ -28,7 +28,7 @@ The **Event Management System** is built on **ASP.NET Core MVC** with **ADO.NET*
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 This project uses a **3-Layer / 3-Tier Architecture**:
 
@@ -68,18 +68,18 @@ This project uses a **3-Layer / 3-Tier Architecture**:
 
 ---
 
-## ✨ Features
+##  Features
 
-- 📝 **User Registration** — New users can sign up
-- 🔐 **User Login** — Secure authentication
-- 📅 **Browse Events** — View all available events
-- ➕ **Add / Manage Events** — Create and manage events
-- 🗄️ **Database Driven** — All data stored and fetched via ADO.NET
-- 🏛️ **3-Tier Architecture** — Clean separation of concerns
+-  **User Registration** — New users can sign up
+-  **User Login** — Secure authentication
+-  **Browse Events** — View all available events
+-  **Add / Manage Events** — Create and manage events
+-  **Database Driven** — All data stored and fetched via ADO.NET
+-  **3-Tier Architecture** — Clean separation of concerns
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Technology          | Usage                                      |
 |---------------------|--------------------------------------------|
@@ -93,7 +93,7 @@ This project uses a **3-Layer / 3-Tier Architecture**:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 EventManagementSystem/
@@ -116,7 +116,7 @@ EventManagementSystem/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -152,7 +152,7 @@ EventManagementSystem/
 
 ---
 
-### Running with Docker 🐳
+### Running with Docker 
 
 ```bash
 docker build -t event-management-system .
@@ -161,7 +161,7 @@ docker run -p 5001:5001 event-management-system
 
 ---
 
-## 🗄️ Database Setup (ADO.NET)
+##  Database Setup (ADO.NET)
 
 1. **Create Database** in SQL Server:
    ```sql
@@ -194,7 +194,7 @@ docker run -p 5001:5001 event-management-system
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the project
 2. Create your feature branch (`git checkout -b feature/NewFeature`)
@@ -204,7 +204,7 @@ docker run -p 5001:5001 event-management-system
 
 ---
 
-## 📬 Contact
+##  Contact
 
 **Vikas Patel**
 - GitHub: [@patel003](https://github.com/patel003)
@@ -212,4 +212,4 @@ docker run -p 5001:5001 event-management-system
 
 ---
 
-> ⭐ If you found this project helpful, please give it a star on GitHub!
+>  If you found this project helpful, please give it a star on GitHub!
