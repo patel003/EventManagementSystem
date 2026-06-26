@@ -208,7 +208,7 @@ docker run -p 5001:5001 event-management-system
 
 **Vikas Patel**
 - GitHub: [@patel003](https://github.com/patel003)
-- LinkedIn: [Vikas Patel](https://www.linkedin.com/in/vikas-patel)
+- LinkedIn: [Vikas Patel](https://www.linkedin.com/in/vikaspatel4441)
 
 ---
 
